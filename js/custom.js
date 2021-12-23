@@ -1,8 +1,8 @@
 (function ($) {
   // menu fixed js code
   $(window).scroll(function () {
-    if(document.head.scrollTop === 0)
-      $('header').css('visibility', 'hidden');
+/*    if(document.head.scrollTop === 0)
+      $('header').css('visibility', 'hidden');*/
 
 
     var window_top = $(window).scrollTop() + 1;
@@ -25,7 +25,6 @@
   } else {
 
     // The viewport is at least 768 pixels wide
-    document.write("This is a tablet or desktop.");
 
   }
 
@@ -33,16 +32,16 @@
     if($(window).width() < 750) {
       if($(window).width() < 500)
       {
-        $('.openHoursBIG').css('margin-top', '20%');
+    /*    $('.openHoursBIG').css('margin-top', '20%');*/
         $('.checkBox').css('margin-left', '150px');
 
       }
-      $('.openHoursBIG').css('font-size', 'small');
-      $('.openHoursBIG').css('margin-top', '50%');
+/*      $('.openHoursBIG').css('font-size', 'small');
+      $('.openHoursBIG').css('margin-top', '50%');*/
     }
     else {
-      $('.openHoursBIG').css('font-size', 'x-large');
-      $('.openHoursBIG').css('margin-top', '5%');
+/*      $('.openHoursBIG').css('font-size', 'x-large');
+      $('.openHoursBIG').css('margin-top', '5%');*/
       $('.checkBox').css('margin-left', '7%');
       $('.checkBox').css('margin-top: 7%');
 
@@ -50,7 +49,7 @@
   });
 
   "use strict";
-  $('header').css('visibility', 'hidden');
+  /*$('header').css('visibility', 'hidden');*/
   $('#datepicker').datepicker();
 
   $('.popup-youtube, .popup-vimeo').magnificPopup({
