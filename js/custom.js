@@ -16,7 +16,7 @@
     }
   });
 
-  if (window.matchMedia("(max-width: 767px)").matches)
+  /*if (window.matchMedia("(max-width: 767px)").matches)
   {
 
     $('.openHoursBIG').css('font-size', 'small');
@@ -26,7 +26,7 @@
 
     // The viewport is at least 768 pixels wide
 
-  }
+  }*/
 
   $(window).resize(function (){
     if($(window).width() < 750) {
