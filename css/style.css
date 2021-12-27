@@ -2195,6 +2195,26 @@ ul {
   visibility: hidden;
 }
 
+.Icon {
+  width: 48px;
+}
+
+.nav-link .a{
+  color: #000;
+}
+.Icon svg {
+  width: 100%;
+  height: auto;
+}
+
+img.logo {
+  width: 100%;
+  height: 100%;
+  /* Recommended - Limit maximum width */
+  max-width: 300px;
+  max-height: 300px;
+}
+
 .openHoursBIG {
   color: white;
   font-size: x-large;
@@ -2365,7 +2385,8 @@ ul {
     left: 0;
     top: 71px;
     width: 100%;
-    background-color: #BD1622;
+    /*background-color: #BD1622;*/
+    background-color: black;
     text-align: center !important;
   }
   /* line 138, /Applications/MAMP/htdocs/palash/cl/july 2019/july/194 Restaurant/194 Restaurant html/sass/_menu.scss */
@@ -2869,12 +2890,12 @@ ul {
   margin-top: 5%;
   margin-bottom: 5%;
 
-  height: 500px;
+  height: auto;
 }
 
 .blackBack{
   padding-top: 3%;
-  background: black;
+  background: wheat;
 }
 
 .dot {
@@ -3037,7 +3058,7 @@ ul {
 /*********** contact part css start ***********/
 /* line 2, /Applications/MAMP/htdocs/palash/cl/july 2019/july/194 Restaurant/194 Restaurant html/sass/_contact_part.scss */
 .contact_part {
-  background-image: url("../img/contact_bg.png");
+  background-image: url("../img/16_Yangste.jpg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
