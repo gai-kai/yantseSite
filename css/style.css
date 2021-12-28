@@ -2416,11 +2416,12 @@ img.logo {
 .banner_part {
   height: 750px;
   position: relative;
-  background-image: url(../img/07_Yangste.jpg);
+ /* background-image: url(../img/07_Yangste.jpg);*/
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+
 
 @media (max-width: 991px) {
   /* line 2, /Applications/MAMP/htdocs/palash/cl/july 2019/july/194 Restaurant/194 Restaurant html/sass/_banner.scss */
