@@ -93,7 +93,11 @@
   }
 
 
-
+  window.addEventListener('load', () => {
+    const now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    document.getElementById('dateTimeReservation').value = now.toISOString().slice(0, -1);
+  });
 
 
 
