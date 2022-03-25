@@ -142,29 +142,39 @@
                 <div class="about_part_iner" style="margin-top: 70px">
                     <div class="row align-items-center">
                         <div class="col-lg-5">
-                            <div class="about_img">
+                            <div class="about_text">
+                                <h5 style="margin-top: 3%">Reservierung Informationen</h5>
                                 <form>
-                                    <p style="font-weight: bolder; margin-top: 9%">Vorname</p>
-                                    <input type="text" placeholder="Max">
+                                    <p style="font-weight: bolder; margin-top: 5%">Vorname</p>
+                                    <input type="text" placeholder="Max" id="firstName" onclick="makeReservationVisible()">
                                     <p style="font-weight: bolder; margin-top: 5%">Nachname</p>
-                                    <input type="text" placeholder="Mustermann">
+                                    <input type="text" placeholder="Mustermann" id="lastName">
                                     <p style="font-weight: bolder; margin-top: 5%">Anzahl der Kinder unter 12 Jahren</p>
-                                    <input type="number" min="0" placeholder="0">
+                                    <input type="number" min="0" placeholder="0" id="numberOfKids">
                                     <p style="font-weight: bolder; margin-top: 5%">Anzahl der Erwachsenen</p>
-                                    <input type="number" min="0" placeholder="0">
+                                    <input type="number" min="0" placeholder="0" id="numberOfPeople">
                                 </form>
                             </div>
                         </div>
                         <div class="col-lg-5">
                             <form>
-                                <p style="font-weight: bolder">E-Mail</p>
-                                <input type="text" placeholder="Max@mail.de">
+                                <p style="font-weight: bolder; margin-top: 6%">E-Mail</p>
+                                <input type="text" placeholder="Max@mail.de" id="eMail">
                                 <p style="font-weight: bolder; margin-top: 5%">Datum und Uhrzeit</p>
-                                <input type="datetime-local" placeholder="Bitte wählen Sie das Datum und die Uhrzeit aus", id="dateTimeReservation">
+                                <input type="datetime-local" placeholder="Bitte wählen Sie das Datum und die Uhrzeit aus" id="dateTimeReservation">
+                                <p style="font-weight: bolder; margin-top: 5%">Telefonnummer</p>
+                                <input type="text" placeholder="02381168168", id="phoneNumber">
                                 <p style="font-weight: bolder; margin-top: 5%">Anmerkung zur Reservierung</p>
-                                <input type="text" placeholder="Bitte am Fenster" style="height: 70px">
+                                <input type="text" placeholder="Bitte am Fenster" style="height: 70px" id="commentFromUser">
                             </form>
                         </div>
+                    </div>
+                    <div class="row align-items-center">
+
+                        <button class="btn_1 mx-auto" style="color: white; display: none" onclick="makeReservation()" id="reservationButton">
+                            Reservieren
+                        </button>
+
                     </div>
                 </div>
             </div>
@@ -181,23 +191,16 @@
                     <div class="row align-items-center">
                         <div class="col-lg-7">
                             <div class="about_text">
-                                <h5 style="margin-top: 3%">Über uns</h5>
-                                <span style="font-size: xxx-large; color: black; font-weight: bolder">"Yangtse" (长江)- Name und Bedeutung</span>
-                                <p>
-                                    Der Yangtse (Jangtsekiang oder Jangtse - Bedeutung: 'Langer Fluss‘)  ist der längste Fluss Chinas.
-                                    Mit 6380 Kilometern, von denen 2800 Kilometer schiffbar sind, ist er auch der längste Fluss Asiens. Ebenso ist dieser drittlängste Fluss der Welt, nach dem Nil und dem Amazonas, aber der längste Fluss,
-                                    der nur durch ein Land fließt. Sein Ursprungsort, der zwischen der Qinghai Provinz und Nagqu (Tibet) liegt,
-                                    hat die höchste Quelle aller anderen Hauptflüsse mit mehr als 5000 m über dem Meeresspiegel.
-                                </p>
-                                <p>
-                                    Unser Restaurant ist nach diesem Fluss benannt worden. Wir möchten unseren Gästen ebenfalls eine weite und breite Auswahl anbieten.
-                                </p>
-                                <!--<a href="#" class="btn_3">learn More</a>-->
+                                <h5 style="margin-top: 3%">Neuer Gast</h5>
+                                <form>
+                                    <p style="font-weight: bolder; margin-top: 6%"> <input type="checkbox"> Ich stimme den AGB zu</p>
+                                    <p style="font-weight: bolder; margin-top: 1%"> <input type="checkbox"> Ich stimme den Datenschutz zu</p>
+                                </form>
                             </div>
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-lg-5" style="margin-top: 3%">
                             <div class="about_img">
-                                <img src="img/pexels-quang-nguyen-vinh-2166711.jpg" alt="" />
+                                <img src="img/03_Yangste.jpg.jpg" alt="" />
                             </div>
                         </div>
                     </div>
@@ -312,19 +315,7 @@
     </div>
 </footer>
 
-<script>
-    window.addEventListener('load', () => {
-        const now = new Date();
-        now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-        //console.log(now.toISOString())
-        if(now.getMonth() < 10)
-            today = now.getFullYear()+'-0'+now.getMonth()+'-'+now.getDate()+'T'+'08:50';
-        else
-            today = now.getFullYear()+'-'+now.getMonth()+'-'+now.getDate()+'T'+'08:50';
-        console.log(today)
-        document.getElementById('dateTimeReservation').value = today.valueOf()
-    });
-</script>
+
 <!-- footer part end-->
 
 <!-- jquery plugins here-->
@@ -348,5 +339,106 @@
 <script src="js/jquery.nice-select.min.js"></script>
 <!-- custom js -->
 <script src="js/custom.js"></script>
+
+<script>
+    window.addEventListener('load', () => {
+        const now = new Date();
+        now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+        //console.log(now.toISOString())
+        if(now.getMonth() < 10)
+            today = now.getFullYear()+'-0'+now.getMonth()+'-'+now.getDate()+'T'+'08:50';
+        else
+            today = now.getFullYear()+'-'+now.getMonth()+'-'+now.getDate()+'T'+'08:50';
+        console.log(today)
+        document.getElementById('dateTimeReservation').value = today.valueOf()
+    });
+
+
+    class Reservation {
+        constructor(email,reservationDate, numberOfPeople, numberOfKids,  timestamp, phoneNumber, commentFromGuestUser) {
+            this.id = 0;
+            this.guestUserID = email;
+            this.reservationDate = reservationDate;
+            this.numberOfPeople = numberOfPeople;
+            this.numberOfKids = numberOfKids;
+            this.haveArrived = false
+            this.timestamp = timestamp;
+            this.phoneNumber = phoneNumber;
+            this.commentFromGuestUser = commentFromGuestUser;
+        }
+
+    }
+
+
+
+    //POST HTTP on Backend
+    function makeReservation()
+    {
+        let url = "http://localhost:8080/api/ReservationService/noAuth";
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", url);
+
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                console.log(xhr.responseText);
+            }
+        };
+
+        const id = 0;
+        const guestUserID = document.getElementById("eMail").value;
+        console.log(guestUserID)
+        let reservationDate = document.getElementById("dateTimeReservation").value;
+        console.log(reservationDate)
+        let numberOfPeople = document.getElementById("numberOfPeople").value;
+        console.log(numberOfPeople)
+        let numberOfKids = document.getElementById("numberOfKids").value;
+        console.log(numberOfKids)
+        const haveArrived = false;
+        const timestamp = "";
+        let phoneNumber = document.getElementById("phoneNumber").value;
+        console.log(phoneNumber)
+        let commentFromGuestUser = document.getElementById("commentFromUser").value;
+        console.log(commentFromGuestUser)
+        let reservation = new Reservation(guestUserID, reservationDate, numberOfPeople, numberOfKids, timestamp, phoneNumber, commentFromGuestUser);
+        console.log(reservation)
+        let reservationJSON = JSON.stringify(reservation);
+        console.log(reservationJSON)
+        xhr.send(reservationJSON);
+    }
+
+    function makeReservationVisible() {
+        console.log("ACTIVATE")
+        var reservationButton = document.getElementById("reservationButton");
+        console.log(checkIfInputFilled())
+        if (checkIfInputFilled()) {
+            reservationButton.style.display = 'block';
+            reservationButton.style.marginTop = '4%'
+            reservationButton.classList.add('btn_1','mx-auto');
+        }else
+            reservationButtonSettings = 'none';
+
+    }
+
+    function checkIfInputFilled(){
+        // var test = document.getElementById("eMail").value;
+        /*        console.log(test)
+                console.log(document.getElementById("dateTimeReservation").value)
+                console.log(document.getElementById("numberOfKids").value)
+                console.log(document.getElementById("numberOfPeople").value)
+                console.log(document.getElementById("phoneNumber").value)
+                console.log(document.getElementById("commentFromUser").value)*/
+
+        return document.getElementById("eMail").value !== "" &&
+            document.getElementById("dateTimeReservation").value !== "" &&
+            document.getElementById("numberOfPeople").value !== "" &&
+            document.getElementById("numberOfKids").value !== "" &&
+            document.getElementById("phoneNumber").value !== ""
+    }
+</script>
+
 </body>
 </html>
