@@ -556,6 +556,19 @@ ul {
   }
 }
 
+.ueberschriftGross{
+  font-size: xxx-large;
+  color: white;
+  font-weight: bolder;
+}
+
+.ueberschrift{
+  font-size: xxx-large;
+  color: black;
+  font-weight: bolder
+}
+
+
 /* line 46, /Applications/MAMP/htdocs/palash/cl/july 2019/july/194 Restaurant/194 Restaurant html/sass/_button.scss */
 .single_page_btn {
   display: inline-block;

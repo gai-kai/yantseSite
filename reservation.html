@@ -118,13 +118,13 @@
 
 <!-- breadcrumb start-->
 <section class="breadcrumb breadcrumb_bg">
-    <div class="container">
+    <div class="container ueberschriftGross">
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb_iner">
                     <div class="breadcrumb_iner_item">
                         <p>Online Reservierung</p>
-                        <span style="font-size: xxx-large; color: white; font-weight: bolder">Yangtse Online Reservierung</span>
+                        <span class="ueberschriftGross">Yangtse Online Reservierung</span>
                     </div>
                 </div>
             </div>
@@ -138,7 +138,7 @@
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-12">
-                <span style="font-size: xxx-large; color: black; font-weight: bolder">Einen Tisch reservieren</span>
+                <span class="ueberschrift">Einen Tisch reservieren</span>
                 <div class="about_part_iner" style="margin-top: 70px">
                     <div class="row align-items-center">
                         <div class="col-lg-5">
@@ -148,24 +148,24 @@
                                     <p style="font-weight: bolder; margin-top: 5%">Vorname</p>
                                     <input type="text" placeholder="Max" id="firstName" onclick="makeReservationVisible()">
                                     <p style="font-weight: bolder; margin-top: 5%">Nachname</p>
-                                    <input type="text" placeholder="Mustermann" id="lastName">
+                                    <input type="text" placeholder="Mustermann" id="lastName" onclick="makeReservationVisible()">
                                     <p style="font-weight: bolder; margin-top: 5%">Anzahl der Kinder unter 12 Jahren</p>
-                                    <input type="number" min="0" placeholder="0" id="numberOfKids">
+                                    <input type="number" min="0" placeholder="0" id="numberOfKids" onclick="makeReservationVisible()">
                                     <p style="font-weight: bolder; margin-top: 5%">Anzahl der Erwachsenen</p>
-                                    <input type="number" min="0" placeholder="0" id="numberOfPeople">
+                                    <input type="number" min="0" placeholder="0" id="numberOfPeople" onclick="makeReservationVisible()">
                                 </form>
                             </div>
                         </div>
                         <div class="col-lg-5">
                             <form>
                                 <p style="font-weight: bolder; margin-top: 6%">E-Mail</p>
-                                <input type="text" placeholder="Max@mail.de" id="eMail">
+                                <input type="text" placeholder="Max@mail.de" id="eMail" onclick="makeReservationVisible()">
                                 <p style="font-weight: bolder; margin-top: 5%">Datum und Uhrzeit</p>
-                                <input type="datetime-local" placeholder="Bitte wählen Sie das Datum und die Uhrzeit aus" id="dateTimeReservation">
+                                <input type="datetime-local" placeholder="Bitte wählen Sie das Datum und die Uhrzeit aus" id="dateTimeReservation" onclick="makeReservationVisible()">
                                 <p style="font-weight: bolder; margin-top: 5%">Telefonnummer</p>
-                                <input type="text" placeholder="02381168168", id="phoneNumber">
+                                <input type="text" placeholder="02381168168", id="phoneNumber" onclick="makeReservationVisible()">
                                 <p style="font-weight: bolder; margin-top: 5%">Anmerkung zur Reservierung</p>
-                                <input type="text" placeholder="Bitte am Fenster" style="height: 70px" id="commentFromUser">
+                                <input type="text" placeholder="Bitte am Fenster" style="height: 70px" id="commentFromUser" onclick="makeReservationVisible()">
                             </form>
                         </div>
                     </div>
@@ -174,6 +174,12 @@
                         <button class="btn_1 mx-auto" style="color: white; display: none" onclick="makeReservation()" id="reservationButton">
                             Reservieren
                         </button>
+
+                    </div>
+
+                    <div class="row align-items-center">
+
+                        <h5>Hallo </h5>
 
                     </div>
                 </div>
@@ -314,6 +320,8 @@
         </div>
     </div>
 </footer>
+
+
 
 
 <!-- footer part end-->
