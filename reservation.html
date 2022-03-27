@@ -137,86 +137,83 @@
 <!-- breadcrumb start-->
 
 <!-- about part start-->
-<section class="about_part single_about_page padding_bottom" style="padding-bottom: 0">
+<section class="about_part single_about_page padding_bottom" style="padding-bottom: 5%" id="reservationForm">
     <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-lg-12">
-                <span class="ueberschrift">Einen Tisch reservieren</span>
-                <div class="about_part_iner" style="margin-top: 70px">
-                    <div class="row align-items-center">
-                        <div class="col-lg-5">
-                            <div class="about_text">
-                                <h5 style="margin-top: 3%">Reservierung Informationen</h5>
-                                <form>
-                                    <p style="font-weight: bolder; margin-top: 5%">Vorname</p>
-                                    <input type="text" placeholder="Max" id="firstName" onclick="makeReservationVisible()">
-                                    <p style="font-weight: bolder; margin-top: 5%">Nachname</p>
-                                    <input type="text" placeholder="Mustermann" id="lastName" onclick="makeReservationVisible()">
-                                    <p style="font-weight: bolder; margin-top: 5%">Anzahl der Kinder unter 12 Jahren</p>
-                                    <input type="number" min="0" placeholder="0" id="numberOfKids" onclick="makeReservationVisible()">
-                                    <p style="font-weight: bolder; margin-top: 5%">Anzahl der Erwachsenen</p>
-                                    <input type="number" min="0" placeholder="0" id="numberOfPeople" onclick="makeReservationVisible()">
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
+
+        <div class="col-lg-12">
+            <span class="ueberschrift">Einen Tisch reservieren</span>
+            <div class="about_part_iner" style="margin-top: 70px">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="about_text">
+                            <h5 style="margin-top: 3%">Reservierung Informationen</h5>
                             <form>
-                                <p style="font-weight: bolder; margin-top: 6%">E-Mail</p>
-                                <input type="text" placeholder="Max@mail.de" id="eMail" onclick="makeReservationVisible()">
-                                <p style="font-weight: bolder; margin-top: 5%">Datum und Uhrzeit</p>
-                                <input type="datetime-local" placeholder="Bitte wählen Sie das Datum und die Uhrzeit aus" id="dateTimeReservation" onclick="makeReservationVisible()">
-                                <p style="font-weight: bolder; margin-top: 5%">Telefonnummer</p>
-                                <input type="text" placeholder="02381168168", id="phoneNumber" onclick="makeReservationVisible()">
-                                <p style="font-weight: bolder; margin-top: 5%">Anmerkung zur Reservierung</p>
-                                <input type="text" placeholder="Bitte am Fenster" style="height: 70px" id="commentFromUser" onclick="makeReservationVisible()">
+                                <p style="font-weight: bolder; margin-top: 5%">Vorname</p>
+                                <input type="text" placeholder="Max" id="firstName" onclick="makeReservationVisible()">
+                                <p style="font-weight: bolder; margin-top: 5%">Nachname</p>
+                                <input type="text" placeholder="Mustermann" id="lastName" onclick="makeReservationVisible()">
+                                <p style="font-weight: bolder; margin-top: 5%">Anzahl der Kinder unter 12 Jahren</p>
+                                <input type="number" min="0" placeholder="0" id="numberOfKids" onclick="makeReservationVisible()">
+                                <p style="font-weight: bolder; margin-top: 5%">Anzahl der Erwachsenen</p>
+                                <input type="number" min="0" placeholder="0" id="numberOfPeople" onclick="makeReservationVisible()">
                             </form>
                         </div>
                     </div>
-                    <div class="row align-items-center">
-
-                        <button class="btn_1 mx-auto" style="color: white; display: none" onclick="makeReservation()" id="reservationButton">
-                            Reservieren
-                        </button>
-
-                    </div>
-
-                    <div class="row align-items-center ">
-                        <p class="ueberschrift mx-auto">Erstes mal hier?</p>
-
-                    </div>
-                    <div class="row align-items-center ">
-                        <p class="mx-auto" style="font-weight: bolder;">Bitte akzeptieren Sie unsere AGB und den Datenschutz</p>
-                    </div>
-                    <div class="row align-items-center ">
-                        <p class="mx-auto" style="font-weight: bolder;">⇓</p>
+                    <div class="col-lg-5">
+                        <form>
+                            <p style="font-weight: bolder; margin-top: 6%">E-Mail</p>
+                            <input type="text" placeholder="Max@mail.de" id="eMail" onclick="makeReservationVisible()">
+                            <p style="font-weight: bolder; margin-top: 5%">Datum und Uhrzeit</p>
+                            <input type="datetime-local" placeholder="Bitte wählen Sie das Datum und die Uhrzeit aus" id="dateTimeReservation" onclick="makeReservationVisible()">
+                            <p style="font-weight: bolder; margin-top: 5%">Telefonnummer</p>
+                            <input type="text" placeholder="02381168168", id="phoneNumber" onclick="makeReservationVisible()">
+                            <p style="font-weight: bolder; margin-top: 5%">Anmerkung zur Reservierung</p>
+                            <input type="text" placeholder="Bitte am Fenster" style="height: 70px" id="commentFromUser" onclick="makeReservationVisible()">
+                        </form>
                     </div>
                 </div>
+                <div class="row align-items-center">
+                    <form class="mx-auto">
+                        <p style="font-weight: bolder; margin-top: 6%"> <input type="checkbox" id="agbCheck" onclick="makeReservationVisible()"> Ich stimme den AGB und dem Datenschutz zu</p>
+                        <p style="font-weight: bolder; margin-top: 1%"> <input type="checkbox"> Ich möchte kostenlose Yangtse Gutscheine per E-Mail erhalten </p>
+                    </form>
+                </div>
+                <div class="row align-items-center">
+                    <button class="btn_1 mx-auto" style="color: white; display: none" onclick="makeReservation()" id="reservationButton">
+                        Reservieren
+                    </button>
+                </div>
+                <div class="row align-items-center">
+                    <button class="mx-auto loader" style="color: red; display: none"  id="loading">
+                        Einen Moment
+                    </button>
+                </div>
+
+                <div class="row align-items-center">
+                    <p class="mx-auto" style="color: red; display: none; font-weight: bolder"  id="reservationComplete">
+                        Ihre Reservierung war ein Erfolg!
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
 </section>
 <!-- about part end-->
 
-<section class="about_part single_about_page padding_bottom" style="margin-top: 0.5%">
+<section class="about_part single_about_page padding_bottom" style="margin-top: 5%; display: none" id="success">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-12">
                 <div class="about_part_iner">
                     <div class="row align-items-center">
-                        <div class="col-lg-7">
-                            <div class="about_text">
-                                <h5 style="margin-top: 3%">Neuer Gast</h5>
-                                <form>
-                                    <p style="font-weight: bolder; margin-top: 6%"> <input type="checkbox"> Ich stimme den AGB zu</p>
-                                    <p style="font-weight: bolder; margin-top: 1%"> <input type="checkbox"> Ich stimme den Datenschutz zu</p>
-                                </form>
-                            </div>
+                        <div class="col-lg-7 mx-auto" style="margin-top: 3%">
+
+                            <p style="font-weight: bolder">Ihre Reservierung war erfolgreich.
+                                Sie werde in Kürze eine E-Mail bekommen mit einem QR-Code. Zeigen Sie den QR-Code am Eingang. </p>
+
                         </div>
-                        <div class="col-lg-5" style="margin-top: 3%">
-                            <div class="about_img">
-                                <img src="img/03_Yangste.jpg.jpg" alt="" />
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -238,7 +235,7 @@
                         <p>Fachmarktzentrum Hürth Eschweiler Straße 2 50354 Hürth</p>
                     </div>
                     <div class="single_contact_part">
-                        <h5>Öffnugszeiten</h5>
+                        <h5>Öffnungszeiten</h5>
                         <p>Mi - Fr von 12.00 - 15.00 Uhr</p>
                         <p>Mo - Fr von 18.00 - 22.30 Uhr</p>
                         <p>Sa 12.00 - 23.00 Uhr</p>
@@ -357,6 +354,7 @@
 <script src="js/custom.js"></script>
 
 <script>
+    const BASE_URL = "http://localhost:8080"
     window.addEventListener('load', () => {
         const now = new Date();
         now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
@@ -372,7 +370,7 @@
 
 
     class Reservation {
-        constructor(email,reservationDate, numberOfPeople, numberOfKids,  timestamp, phoneNumber, commentFromGuestUser) {
+        constructor(email,reservationDate, numberOfPeople, numberOfKids,  timestamp, phoneNumber, commentFromGuestUser, firstName, lastName) {
             this.id = 0;
             this.guestUserID = email;
             this.reservationDate = reservationDate;
@@ -382,7 +380,10 @@
             this.timestamp = timestamp;
             this.phoneNumber = phoneNumber;
             this.commentFromGuestUser = commentFromGuestUser;
+            this.firstName = firstName;
+            this.lastName = lastName;
         }
+
 
     }
 
@@ -391,8 +392,9 @@
     //POST HTTP on Backend
     function makeReservation()
     {
-        let url = "http://localhost:8080/api/ReservationService/noAuth";
-
+        loading(true);
+        let url = BASE_URL+"/api/ReservationService/noAuth/"+document.getElementById("agbCheck").checked;
+        console.log(url);
         let xhr = new XMLHttpRequest();
         xhr.open("POST", url);
 
@@ -402,29 +404,43 @@
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 console.log(xhr.responseText);
+                var reservation = JSON.parse(xhr.responseText);
+                console.log(reservation)
+                if (reservation.id != -1) {
+                    loading(false);
+                    makeSuccessVisible()
+
+                }
             }
         };
 
         const id = 0;
         const guestUserID = document.getElementById("eMail").value;
-        console.log(guestUserID)
         let reservationDate = document.getElementById("dateTimeReservation").value;
-        console.log(reservationDate)
         let numberOfPeople = document.getElementById("numberOfPeople").value;
-        console.log(numberOfPeople)
         let numberOfKids = document.getElementById("numberOfKids").value;
-        console.log(numberOfKids)
         const haveArrived = false;
         const timestamp = "";
         let phoneNumber = document.getElementById("phoneNumber").value;
-        console.log(phoneNumber)
         let commentFromGuestUser = document.getElementById("commentFromUser").value;
-        console.log(commentFromGuestUser)
-        let reservation = new Reservation(guestUserID, reservationDate, numberOfPeople, numberOfKids, timestamp, phoneNumber, commentFromGuestUser);
-        console.log(reservation)
+        let firstName = document.getElementById("firstName").value;
+        let lastName = document.getElementById("lastName").value;
+        let reservation = new Reservation(guestUserID, reservationDate, numberOfPeople, numberOfKids,
+            timestamp, phoneNumber, commentFromGuestUser, firstName, lastName);
         let reservationJSON = JSON.stringify(reservation);
-        console.log(reservationJSON)
         xhr.send(reservationJSON);
+
+
+    }
+
+    function loading(boolean){
+        if(boolean){
+            document.getElementById("loading").style.display = 'block'
+            document.getElementById("reservationButton").style.display = 'none';
+        }else{
+            document.getElementById("loading").style.display = 'none'
+        }
+
     }
 
     function makeReservationVisible() {
@@ -435,25 +451,42 @@
             reservationButton.style.display = 'block';
             reservationButton.style.marginTop = '4%'
             reservationButton.classList.add('btn_1','mx-auto');
-        }else
+        }else {
             reservationButtonSettings = 'none';
+        }
+
+    }
+
+    function makeSuccessVisible(){
+        document.getElementById("reservationForm").style.display = 'none'
+        document.getElementById("reservationComplete").style.display = 'block'
+        document.getElementById("success").style.display = 'block';
 
     }
 
     function checkIfInputFilled(){
-        // var test = document.getElementById("eMail").value;
-        /*        console.log(test)
-                console.log(document.getElementById("dateTimeReservation").value)
-                console.log(document.getElementById("numberOfKids").value)
-                console.log(document.getElementById("numberOfPeople").value)
-                console.log(document.getElementById("phoneNumber").value)
-                console.log(document.getElementById("commentFromUser").value)*/
+        var numberOfFilledInputBox = 0;
+        if(document.getElementById("eMail").value !== "")
+            numberOfFilledInputBox++;
+        if(document.getElementById("numberOfPeople").value !== "")
+            numberOfFilledInputBox++;
+        if(document.getElementById("numberOfKids").value !== "")
+            numberOfFilledInputBox++;
+        if(document.getElementById("phoneNumber").value !== "")
+            numberOfFilledInputBox++;
+        /*        console.log("Checkbox coming")
+                console.log(document.getElementById("agbCheck").checked);*/
+        return numberOfFilledInputBox >= 3 && document.getElementById("agbCheck").checked;
 
-        return document.getElementById("eMail").value !== "" &&
-            document.getElementById("dateTimeReservation").value !== "" &&
-            document.getElementById("numberOfPeople").value !== "" &&
-            document.getElementById("numberOfKids").value !== "" &&
-            document.getElementById("phoneNumber").value !== ""
+    }
+    function isGuestUser(){
+
+        var email = document.getElementById("eMail").value;
+        if(email == "")
+            return false;
+        else{
+            var restURL = BASE_URL+""
+        }
     }
 </script>
 
