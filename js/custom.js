@@ -91,36 +91,21 @@
       }
     });
   }
-
-
-//Reservation Script
-
-  makeReservation()
-  {
-    let url = "http://server.gaikai.xyz/api/ReservationService";
-
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", url);
-
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.setRequestHeader("Content-Type", "application/json");
-
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        console.log(xhr.responseText);
-      }
-    };
-
-    let data = `{
-  "Id": 78912,
-  "Customer": "Jason Sweet",
-  "Quantity": 1,
-  "Price": 18.00
-}`;
-
-    xhr.send(data);
+  class Reservation {
+    constructor(guestUserID, reservationDate, numberOfPeople, haveArrived, timestamp, phoneNumber, commentFromGuestUser) {
+      this.guestUserID = guestUserID;
+      this.reservationDate = reservationDate;
+      this.numberOfPeople = numberOfPeople;
+      this.haveArrived = haveArrived;
+      this.timestamp = timestamp;
+      this.phoneNumber = phoneNumber;
+      this.commentFromGuestUser = commentFromGuestUser;
+    }
 
   }
+
+
+
 
 
 
