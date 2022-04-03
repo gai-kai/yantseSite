@@ -1,8 +1,8 @@
 (function ($) {
   // menu fixed js code
   $(window).scroll(function () {
-/*    if(document.head.scrollTop === 0)
-      $('header').css('visibility', 'hidden');*/
+    /*    if(document.head.scrollTop === 0)
+          $('header').css('visibility', 'hidden');*/
 
 
     var window_top = $(window).scrollTop() + 1;
@@ -32,16 +32,16 @@
     if($(window).width() < 750) {
       if($(window).width() < 500)
       {
-    /*    $('.openHoursBIG').css('margin-top', '20%');*/
+        /*    $('.openHoursBIG').css('margin-top', '20%');*/
         $('.checkBox').css('margin-left', '150px');
 
       }
-/*      $('.openHoursBIG').css('font-size', 'small');
-      $('.openHoursBIG').css('margin-top', '50%');*/
+      /*      $('.openHoursBIG').css('font-size', 'small');
+            $('.openHoursBIG').css('margin-top', '50%');*/
     }
     else {
-/*      $('.openHoursBIG').css('font-size', 'x-large');
-      $('.openHoursBIG').css('margin-top', '5%');*/
+      /*      $('.openHoursBIG').css('font-size', 'x-large');
+            $('.openHoursBIG').css('margin-top', '5%');*/
       $('.checkBox').css('margin-left', '7%');
       $('.checkBox').css('margin-top: 7%');
 
@@ -93,11 +93,34 @@
   }
 
 
+//Reservation Script
 
+  makeReservation()
+  {
+    let url = "http://server.gaikai.xyz/api/ReservationService";
 
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
 
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.setRequestHeader("Content-Type", "application/json");
 
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        console.log(xhr.responseText);
+      }
+    };
 
+    let data = `{
+  "Id": 78912,
+  "Customer": "Jason Sweet",
+  "Quantity": 1,
+  "Price": 18.00
+}`;
+
+    xhr.send(data);
+
+  }
 
 
 
