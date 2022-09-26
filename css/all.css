@@ -6,6 +6,11 @@
 /* The grid: Four equal columns that floats next to each other */
 * {box-sizing:border-box}
 
+
+.flex-fixed-width-item {
+  flex: 0 0 100px;
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
@@ -16,6 +21,7 @@
 /* Hide the images by default */
 .mySlides {
   display: none;
+
 }
 
 /* Next & previous buttons */
