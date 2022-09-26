@@ -87,6 +87,15 @@
   animation-duration: 1.5s;
 }
 
+.marginTopOneEm {
+  margin-top: 0.1em;
+}
+
+.spacingPrice {
+  margin-right: 2em;
+
+}
+
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
