@@ -102,6 +102,49 @@
 
 }
 
+.fase {
+  color: #ffffff;
+  background-color: #119c21;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin-bottom: 0;
+}
+.fase2 {
+  margin-top: 0;
+  color: #ffffff;
+  background-color: #42c250;
+  font-size: 1.3em;
+  font-weight: normal;
+  text-align: center;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  margin-bottom: 0;
+}
+.fase3 {
+  margin-top: 0;
+  color: #119c21;
+  background-color: #c2ffca;
+  font-size: 1.3em;
+  font-weight: normal;
+  text-align: center;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  margin-bottom: 0;
+}
+.row.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.col-md-4 {
+  background: pink;
+  border: 1px solid red;
+}
+
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
