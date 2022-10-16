@@ -103,17 +103,22 @@
 <section class="food_menu pt-1 pb-1 d-flex justify-content-center mt-3" >
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <p class="font-weight-bolder h1 text-light">Speisen</p>
+            <p class="font-weight-bolder h1 text-light">Speisen und Getränke</p>
         </div>
 
         <div class="row d-flex justify-content-center">
             <div class="col-sm mt-1 h-75 w-75">
-                <button type="button" class="btn_1" style="background-color:wheat; border-radius: 3em; color: black " href="reservation.html" onclick="changeDisplayFood(this)">
-                    <img src="img/icon/buffet.png" alt="" class="h-25 w-25" >Warme Speisen
+                <a href="#food-Menu" class="btn_1" style="background-color:wheat; border-radius: 3em; color: black; cursor: pointer" onclick="changeDisplayFood(this)">
+                    <img src="img/icon/buffet.png" alt="" class="h-25 w-25" href="#jump-Food">Warme Speisen
+                </a>
+            </div>
+            <div class="col-sm mt-1 h-75 w-75 ">
+                <button type="button" class="btn_1" style="background-color:wheat; border-radius: 3em; color: black " onclick="changeDisplayFood(this)" >
+                    <img src="img/icon/glass-drinks-icon.png" alt="" class="h-25 w-25">Getränke
                 </button>
             </div>
             <div class="col-sm mt-1 h-75 w-75 ">
-                <button type="button" class="btn_1" style="background-color:wheat; border-radius: 3em; color: black " href="reservation.html" onclick="changeDisplayFood(this)" >
+                <button type="button" class="btn_1" style="background-color:wheat; border-radius: 3em; color: black " onclick="changeDisplayFood(this)" >
                     <img src="img/icon/teppanyaki.png" alt="" class="h-25 w-25">Mongolischer Grill
                 </button>
             </div>
@@ -122,17 +127,17 @@
 
         <div class="row d-flex justify-content-center">
             <div class="col-sm mt-1 h-75 w-75">
-                <button type="button" class="btn_1" style="background-color:wheat; border-radius: 3em; color: black " href="reservation.html" onclick="changeDisplayFood(this)">
+                <a class="btn_1" style="background-color:wheat; border-radius: 3em; color: black; cursor: pointer " href="#warm-items" onclick="changeDisplayFood(this)">
                     <img src="img/icon/salad.png" alt="" class="h-25 w-25">Salat-Theke
-                </button>
+                </a>
             </div>
             <div class="col-sm mt-1 h-75 w-75">
-                <button type="button" class="btn_1" style="background-color:wheat; border-radius: 3em; color: black " href="reservation.html" onclick="changeDisplayFood(this)" >
+                <button type="button" class="btn_1" style="background-color:wheat; border-radius: 3em; color: black " href="#jump-Food" onclick="changeDisplayFood(this)" >
                     <img src="img/icon/sushi.png" alt="" class="h-25 w-25">Sushi
                 </button>
             </div>
             <div class="col-sm mt-1 h-75 w-75 " >
-                <button type="button" class="btn_1" style="background-color:wheat; border-radius: 3em; color: black " href="reservation.html" onclick="changeDisplayFood(this)" >
+                <button type="button" class="btn_1" style="background-color:wheat; border-radius: 3em; color: black " href="#jump-Food" onclick="changeDisplayFood(this)" >
                     <img src="img/icon/dessert.png" alt="" class="h-25 w-25">Dessert
                 </button>
             </div>
@@ -143,6 +148,8 @@
 
 
 <section id="food-Menu">
+
+
 
     <section id="warm-items" class="food_menu pt-0 mt-5">
         <div class="container">
@@ -185,6 +192,7 @@
                                         <p></p>
                                     </div>
                                 </div>
+                                <a id="a-test"></a>
                                 <div class="single_food_item media">
                                     <img src="img/food_menu/pilze.jpg" class="img-responsive" alt="...">
                                     <div class="media-body align-self-center">
@@ -739,7 +747,6 @@
 <!-- particles js -->
 <script src="js/owl.carousel.min.js"></script>
 <!-- swiper js -->
-<script src="js/slick.min.js"></script>
 <script src="js/gijgo.min.js"></script>
 <script src="js/jquery.nice-select.min.js"></script>
 <!-- custom js -->

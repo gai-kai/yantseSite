@@ -33,5 +33,5 @@ function makeAllDisplayNone () {
 function changeFoodSection (food_string) {
 
     document.getElementById(food_string).style.display = "block"
-    document.getElementById(food_string).scrollIntoView();
+    //document.getElementById(food_string).scrollIntoView();
 }
