@@ -17,6 +17,9 @@ function changeDisplayFood (clickedButton) {
         case "Salat-Theke":
             changeFoodSection("salad")
             break;
+        case "Getränke":
+            changeFoodSection("drinks")
+            break;
         default:
         // code block
     }
