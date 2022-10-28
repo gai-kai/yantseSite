@@ -1,37 +1,33 @@
 
 var defaultDate
-const BASE_URL = "https://server.gaikai.xyz:8888"
-/*const weekDayOpenHours = [
-    ["12:30", "21:30"],
-    ["16:30", "21:30"],
-    ["16:30", "21:30"],
-    ["16:30", "21:30"],
-    ["16:30", "21:30"],
-    ["12:00", "21:30"],
-    ["12:00", "21:30"],
-];*/
+const CUSTOMER = "yangtse"
+const BASE_URL = "https://api.gaikai.xyz/"+CUSTOMER
+
+
 
 const weekDayOpenMonday = [
-    [16.30, 22.30]
+    [18.00, 22.00]
 ]
 const weekDayOpenTuesday = [
-    [16.30, 22.30]
+    [18.00, 22.00]
 ]
 const weekDayOpenWednesday = [
-    [16.30, 22.30]
+    [12.00, 14.30],
+    [18.00, 22.00]
 ]
 const weekDayOpenThursday = [
-    [16.30, 22.30]
+    [12.00, 14.30],
+    [18.00, 22.00]
 ]
 const weekDayOpenFriday = [
     [12.00, 14.30],
-    [17.30, 22.30]
+    [18.00, 22.30]
 ]
 const weekDayOpenSaturday = [
     [12.00, 22.30]
 ]
 const weekDayOpenSunday = [
-    [12.00, 22.30]
+    [12.00, 22.00]
 ]
 
 const weekDayOpenObjects = [
@@ -54,7 +50,7 @@ this.props = {
     cookieStorageDays: 365, // the duration the cookie configuration is stored on the client
     postSelectionCallback: getScript // callback function, called after the user has made his selection
 }
-var cookieSettings = new BootstrapCookieConsentSettings(props)
+
 // cookieSettings.showDialog();
 
 function getScript() {
@@ -234,7 +230,8 @@ function makeReservation()
         let commentFromGuestUser = document.getElementById("commentFromUser").value;
         let firstName = document.getElementById("firstName").value;
         let lastName = document.getElementById("lastName").value;
-        let reservation = new Reservation(guestUserID, reservationDate, numberOfPeople, numberOfKids,
+        let reservation = null
+        reservation = new Reservation(guestUserID, reservationDate, numberOfPeople, numberOfKids,
             timestamp, phoneNumber, commentFromGuestUser, firstName, lastName);
         let reservationJSON = JSON.stringify(reservation);
         xhr.send(reservationJSON);

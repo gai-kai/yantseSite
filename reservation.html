@@ -106,33 +106,40 @@
 
         <div class="col-lg-12">
             <span class="ueberschrift text-white">Einen Tisch reservieren</span>
-            <div class="about_part_iner" style="margin-top: 70px">
+            <div class="about_part_iner mt-30 ">
                 <div class="row align-items-center">
                     <div class="col-lg-5">
                         <div class="about_text">
-                            <h5 class="mt-3 text-danger" >Reservierung Informationen</h5>
+                            <h5 class="mt-3 text-danger font-weight-bolder" >Reservierung Informationen</h5>
                             <form>
-                                <p style="font-weight: bolder; margin-top: 5%">Vorname</p>
-                                <input type="text" placeholder="Max" id="firstName" onclick="makeReservationVisible()">
-                                <p style="font-weight: bolder; margin-top: 5%">Nachname</p>
-                                <input type="text" placeholder="Mustermann" id="lastName" onclick="makeReservationVisible()">
-                                <p style="font-weight: bolder; margin-top: 5%">Anzahl der Kinder unter 12 Jahren</p>
-                                <input type="number" min="0" placeholder="0" id="numberOfKids" onclick="makeReservationVisible()">
-                                <p style="font-weight: bolder; margin-top: 5%">Anzahl der Erwachsenen</p>
-                                <input type="number" min="0" placeholder="0" id="numberOfPeople" onclick="makeReservationVisible()">
+                                <p class="mt-2 font-weight-bolder ">Vorname</p>
+                                <input class="w-75" type="text" placeholder="Max" id="firstName">
+                                <p class="mt-2 font-weight-bolder">Nachname</p>
+                                <input type="text" class="w-75" placeholder="Mustermann" id="lastName" >
+                                <p class="mt-2 font-weight-bolder">Anzahl der Kinder unter 12 Jahren</p>
+                                <input class="w-75" type="number" min="0" placeholder="0" id="numberOfKids" >
+                                <p class="mt-2 font-weight-bolder">Anzahl der Erwachsenen</p>
+                                <input class="w-75" type="number" min="0" placeholder="0" id="numberOfPeople" >
                             </form>
                         </div>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-4">
                         <form>
-                            <p style="font-weight: bolder; margin-top: 6%">E-Mail</p>
-                            <input type="text" placeholder="Max@mail.de" id="eMail" onclick="makeReservationVisible()">
-                            <p style="font-weight: bolder; margin-top: 5%">Datum und Uhrzeit</p>
-                            <input type="datetime-local" placeholder="Bitte wählen Sie das Datum und die Uhrzeit aus" id="dateTimeReservation" onclick="makeReservationVisible()">
-                            <p style="font-weight: bolder; margin-top: 5%">Telefonnummer</p>
-                            <input type="text" placeholder="02381168168" id="phoneNumber" onclick="makeReservationVisible()">
-                            <p style="font-weight: bolder; margin-top: 5%">Anmerkung zur Reservierung</p>
-                            <input type="text" placeholder="Bitte am Fenster" style="height: 70px" id="commentFromUser" onclick="makeReservationVisible()">
+                            <p class="mt-30 font-weight-bolder">E-Mail</p>
+                            <input type="text" placeholder="Max@mail.de" id="eMail" >
+                            <p class="mt-2 font-weight-bolder">Datum und Uhrzeit</p>
+                            <input type="datetime-local" placeholder="Bitte wählen Sie das Datum und die Uhrzeit aus" id="dateTimeReservation" >
+                            <p class="mt-2 font-weight-bolder">Telefonnummer</p>
+                            <input type="text" placeholder="02381168168" id="phoneNumber" >
+                            <p class="mt-2 font-weight-bolder">Anmerkung zur Reservierung</p>
+                            <textarea name="comment" rows="5" cols="20" type="text" placeholder="Bitte am Fenster" style="height: 5em" id="commentFromUser" ></textarea>
+                        </form>
+                    </div>
+                    <div class="col-md">
+                        <form class="mx-auto">
+                            <p class="mt-3 font-weight-bolder"> <input type="checkbox" id="agbCheck"> Romantisches Date</p>
+                            <p class="mt-1 font-weight-bolder"> <input type="checkbox"> Fensterplatz </p>
+                            <p class="mt-1 font-weight-bolder"> <input type="checkbox"> Geburstag </p>
                         </form>
                     </div>
                 </div>
@@ -141,14 +148,20 @@
 
                 <div class="row align-items-center">
                     <form class="mx-auto">
-                        <p style="font-weight: bolder; margin-top: 6%"> <input type="checkbox" id="agbCheck" onclick="makeReservationVisible()"> Ich stimme den AGB und dem Datenschutz zu</p>
-                        <p style="font-weight: bolder; margin-top: 1%"> <input type="checkbox"> Ich möchte kostenlose Yangtse Gutscheine per E-Mail erhalten </p>
+                        <p class="mt-3 font-weight-bolder"> <input type="checkbox" id="agbCheck"> Ich stimme den AGB und dem Datenschutz zu</p>
+                        <p class="mt-1 font-weight-bolder"> <input type="checkbox"> Ich möchte kostenlose Yangtse Gutscheine per E-Mail erhalten </p>
                     </form>
                 </div>
                 <div class="row align-items-center">
-                    <button class="btn_1 mx-auto" style="color: white; display: none" onclick="makeReservation()" id="reservationButton">
+                    <button class="btn_1 mx-auto mt-4" onclick="makeReservation()" id="reservationButton">
                         Reservieren
                     </button>
+                </div>
+                <div class="row">
+                    <p id="invalidTimeSign"class="ff-secondary text-primary fw-normal" style="display:none;">Die angegeben Zeit ist ungültig. Bitte lesen Sie unsere Öffnungszeiten nochmal durch und vergewissern Sie sich, dass Sie ein korrektes Datum und eine gültige Uhrzeit angeben</p>
+                </div>
+                <div class="row">
+                    <p id="invalidInformation"class="ff-secondary text-primary fw-normal" style="display:none;">Ihre Angaben sind unvollständig. Zu den Pflichtangaben gehören: E-Mail, Telefonnummer, Name, Vorname, Anzahl der Personen. Außerdem müssen Sie die AGBs akzeptieren damit eine Reservierung erfolgen kann.</p>
                 </div>
                 <div class="row align-items-center">
                     <button class="mx-auto loader" style="color: red; display: none"  id="loading">
@@ -168,7 +181,7 @@
 </section>
 <!-- about part end-->
 
-<section class="about_part single_about_page padding_bottom" style="margin-top: 5%; display: none" id="success">
+<section class="about_part single_about_page padding_bottom mt-5 d-none" id="success">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-12">
@@ -176,7 +189,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-7 mx-auto" style="margin-top: 3%">
 
-                            <p style="font-weight: bolder">Ihre Reservierung war erfolgreich.
+                            <p class="font-weight-bolder">Ihre Reservierung war erfolgreich.
                                 Sie werde in Kürze eine E-Mail bekommen mit einem QR-Code. Zeigen Sie den QR-Code am Eingang. </p>
 
                         </div>
@@ -270,7 +283,7 @@
 <!-- swiper js -->
 <script src="js/slick.min.js"></script>
 <script src="js/gijgo.min.js"></script>
-<script src="js/jquery.nice-select.min.js"></script>
+
 <!-- custom js -->
 <script src="js/reservation.js"></script>
 
