@@ -87,7 +87,8 @@ window.addEventListener('load', () => {
 
 
 class Reservation {
-    constructor(email,reservationDate, numberOfPeople, numberOfKids,  timestamp, phoneNumber, commentFromGuestUser, firstName, lastName) {
+    constructor(email,reservationDate, numberOfPeople, numberOfKids,  timestamp, phoneNumber, commentFromGuestUser, firstName, lastName,
+    isBirthday, isRomanticDate, isWindowSeat ) {
         this.id = 0;
         this.guestUserID = email;
         this.reservationDate = reservationDate;
@@ -99,6 +100,12 @@ class Reservation {
         this.commentFromGuestUser = commentFromGuestUser;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.birthday = isBirthday;
+        this.romanticDate = isRomanticDate;
+        this.windowSeat = isWindowSeat;
+        this.birthday = isBirthday;
+        this.romanticDate = isRomanticDate;
+        this.windowSeat = isWindowSeat;
     }
 
 
@@ -230,6 +237,9 @@ function makeReservation()
         let commentFromGuestUser = document.getElementById("commentFromUser").value;
         let firstName = document.getElementById("firstName").value;
         let lastName = document.getElementById("lastName").value;
+        let isBirthday = document.getElementById("isBirthday").checked;
+        let isRomanticDate = document.getElementById("isRomanticDate").checked;
+        let isWindowSeat = document.getElementById("isWindowSeat").checked;
         let reservation = null
         reservation = new Reservation(guestUserID, reservationDate, numberOfPeople, numberOfKids,
             timestamp, phoneNumber, commentFromGuestUser, firstName, lastName);
@@ -265,9 +275,12 @@ function makeReservationVisible() {
 }
 
 function makeSuccessVisible(){
-    document.getElementById("reservationForm").style.display = 'none'
-    document.getElementById("reservationComplete").style.display = 'block'
-    document.getElementById("success").style.display = 'block';
+    document.getElementById("success").classList.remove('d-none')
+    document.getElementById("reservationForm").classList.add('d-none')
+
+
+
+
 
 }
 

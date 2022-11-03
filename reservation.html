@@ -74,6 +74,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="openingHours.html">Öffnungszeiten und Preise</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Impresum.html">Impressum</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="DSVGO.html">Datenschutzerklärung</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -107,7 +113,7 @@
         <div class="col-lg-12">
             <span class="ueberschrift text-white">Einen Tisch reservieren</span>
             <div class="about_part_iner mt-30 ">
-                <div class="row align-items-center">
+                <div class="row align-items-center " id="reservationInput">
                     <div class="col-lg-5">
                         <div class="about_text">
                             <h5 class="mt-3 text-danger font-weight-bolder" >Reservierung Informationen</h5>
@@ -137,18 +143,18 @@
                     </div>
                     <div class="col-md">
                         <form class="mx-auto">
-                            <p class="mt-3 font-weight-bolder"> <input type="checkbox" id="agbCheck"> Romantisches Date</p>
-                            <p class="mt-1 font-weight-bolder"> <input type="checkbox"> Fensterplatz </p>
-                            <p class="mt-1 font-weight-bolder"> <input type="checkbox"> Geburstag </p>
+                            <p class="mt-3 font-weight-bolder d-none"> <input type="checkbox" id="isRomanticDate"> Romantisches Date</p>
+                            <p class="mt-1 font-weight-bolder"> <input type="checkbox" id="isWindowSeat"> Fensterplatz </p>
+                            <p class="mt-1 font-weight-bolder"> <input type="checkbox" id="isBirthday"> Geburtstag </p>
                         </form>
                     </div>
                 </div>
 
 
 
-                <div class="row align-items-center">
+                <div class="row align-items-center" id="reservationButtons">
                     <form class="mx-auto">
-                        <p class="mt-3 font-weight-bolder"> <input type="checkbox" id="agbCheck"> Ich stimme den AGB und dem Datenschutz zu</p>
+                        <p class="mt-3 font-weight-bolder"> <input type="checkbox" id="agbCheck"> Ich stimme dem <a href="DSVGO.html">Datenschutz</a> zu</p>
                         <p class="mt-1 font-weight-bolder"> <input type="checkbox"> Ich möchte kostenlose Yangtse Gutscheine per E-Mail erhalten </p>
                     </form>
                 </div>
@@ -169,11 +175,6 @@
                     </button>
                 </div>
 
-                <div class="row align-items-center">
-                    <p class="mx-auto" style="color: red; display: none; font-weight: bolder"  id="reservationComplete">
-                        Ihre Reservierung war ein Erfolg!
-                    </p>
-                </div>
 
             </div>
         </div>
@@ -242,7 +243,9 @@
                     <img src="img/Yangtse_logo.png" class="logo" alt="#" />
                     <p>+49 2233 - 96 66 477</p>
                     <span>restaurant@yangtse-koeln.com</span>
+                    <a href="DSVGO.html">DSVGO</a>
 
+                    <a href="Impresum.html">Impresum</a>
                 </div>
             </div>
 
@@ -260,10 +263,6 @@
         </div>
     </div>
 </footer>
-
-
-
-<!-- footer part end-->
 
 <!-- jquery plugins here-->
 <!-- jquery -->
