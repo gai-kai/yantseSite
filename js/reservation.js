@@ -49,7 +49,7 @@ window.addEventListener('load', () => {
 
 
     document.getElementById('dateTimeReservation').value = now.toISOString().slice(0,16)
-    defaultDate = today;
+    defaultDate = now;
 });
 
 
@@ -128,6 +128,7 @@ function checkTimeInput(){
     let dateTimeElement = document.getElementById("dateTimeReservation")
     let dateTimeValue = new Date(dateTimeElement.value)
     let defaultDateTimeValue = new Date(defaultDate)
+/*
     if(dateTimeValue.getTime() === defaultDateTimeValue.getTime()) {
         displayInvalidTime()
         return false
@@ -137,6 +138,7 @@ function checkTimeInput(){
         month = "0"+ month
     //2022-08-16T08:50
 
+*/
 
     let desiredDay = dateTimeValue.getDay();
     let desiredTime = dateTimeValue.getHours() + "." + dateTimeValue.getMinutes();
