@@ -23,7 +23,8 @@ const weekDayOpenFriday = [
     [18.00, 22.30]
 ]
 const weekDayOpenSaturday = [
-    [12.00, 22.30]
+    [12.00, 18.30],
+    [19.30, 21.00]
 ]
 const weekDayOpenSunday = [
     [12.00, 22.00]
@@ -128,20 +129,29 @@ function checkTimeInput(){
     let dateTimeElement = document.getElementById("dateTimeReservation")
     let dateTimeValue = new Date(dateTimeElement.value)
     let defaultDateTimeValue = new Date(defaultDate)
-/*
-    if(dateTimeValue.getTime() === defaultDateTimeValue.getTime()) {
-        displayInvalidTime()
-        return false
-    }
-    let month = dateTimeValue.getMonth() +1
-    if(month < 10)
-        month = "0"+ month
-    //2022-08-16T08:50
 
-*/
+
 
     let desiredDay = dateTimeValue.getDay();
     let desiredTime = dateTimeValue.getHours() + "." + dateTimeValue.getMinutes();
+    desiredTime = parseFloat(desiredTime);
+
+    //Christmas
+    if((dateTimeValue.getDate() === 24 ||dateTimeValue.getDate() === 25 || dateTimeValue.getDate() === 26)  && dateTimeValue.getMonth() === 11){
+        //Only make reservation before 12:00-16:00 or after 20:00-22:30
+        if(desiredTime === 12.00 || desiredTime === 15.00 || desiredTime === 19.40){
+            document.getElementById("invalidTimeSign").style.display = "none"
+            return true
+        }
+
+        else {
+            displayInvalidTime();
+            return false;
+        }
+    }
+
+
+
 
     if(isWeekdayToBook(desiredDay, desiredTime)) {
         document.getElementById("invalidTimeSign").style.display = "none"
